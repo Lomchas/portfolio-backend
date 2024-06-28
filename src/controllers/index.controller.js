@@ -3,12 +3,13 @@ const User = require('../models/aboutMe.model');
 const experience = require('../models/experience.model');
 const Project = require('../models/projects.model');
 const mongoose = require('mongoose');
+const homeTemplate = require('../views/homeTemplate');
 
 const controller = {};
 
 
 controller.index = (req, res) => {
-    res.send('Welcome to my first API')
+    res.send(homeTemplate)
 };
 
 
