@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const path = require('path');
+
 
 require('dotenv').config();
 
@@ -18,8 +20,8 @@ dbconnect();
 app.use(cors());
 app.use(express.json())
 app.use(bodyParser.json());
-app.use('/portfolioDaniellosada',routes)
-
+app.use('/portfolioDaniellosada', routes)
+app.use('/assets', express.static(path.join(__dirname, 'assets')))
 
 
 // start server
