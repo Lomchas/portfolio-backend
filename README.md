@@ -1,6 +1,7 @@
 # 🌐 Personal Portfolio API
 
-[presentation](path/to/your/aboutMe-screenshot.png)
+![image](https://github.com/Lomchas/portfolio-backend/assets/89220592/7c05aa91-db8b-4ac4-ad96-2bfbe6241f78)
+
 
 Welcome to my **Personal Portfolio API**! This API is designed to showcase my skills, projects, and relevant information about me. Built with **Express.js** and **MongoDB**, and deployed on **Render**, this API serves as the backbone of my personal portfolio website.
 
@@ -17,7 +18,8 @@ Welcome to my **Personal Portfolio API**! This API is designed to showcase my sk
 **Method**: GET
 
 **Response**:
-![aboutMe Response](path/to/your/aboutMe-screenshot.png)
+![AboutMe](https://github.com/Lomchas/portfolio-backend/assets/89220592/e767e0c5-65ef-4fee-9ae5-99836f662d17)
+
 
 ### 🏆 `/experiences`
 **Description**: This route lists my professional experiences, including job roles, companies, and durations.
@@ -25,7 +27,8 @@ Welcome to my **Personal Portfolio API**! This API is designed to showcase my sk
 **Method**: GET
 
 **Response**:
-![experiences Response](path/to/your/experiences-screenshot.png)
+![experiences](https://github.com/Lomchas/portfolio-backend/assets/89220592/68339994-1ba8-411f-9cbb-bd4045017242)
+
 
 ### 💼 `/projects`
 **Description**: This route showcases my projects, including titles, descriptions, and links to live demos or repositories.
@@ -33,7 +36,8 @@ Welcome to my **Personal Portfolio API**! This API is designed to showcase my sk
 **Method**: GET
 
 **Response**:
-![projects Response](path/to/your/projects-screenshot.png)
+![projects](https://github.com/Lomchas/portfolio-backend/assets/89220592/d99d9224-0446-402f-8f59-4434d517c344)
+
 
 ## 🌟 How to Use
 1. **Clone the repository**: `git clone https://github.com/yourusername/portfolio-api.git`
