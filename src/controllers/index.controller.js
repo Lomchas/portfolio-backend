@@ -1,9 +1,9 @@
-const dbconnect = require('../config/config')
 const User = require('../models/aboutMe.model');
 const experience = require('../models/experience.model');
 const Project = require('../models/projects.model');
-const mongoose = require('mongoose');
 const homeTemplate = require('../views/homeTemplate');
+const nodemailer = require('nodemailer')
+const sendEmailTemplate = require('../views/sendEmailTemplate');
 
 const controller = {};
 
@@ -12,66 +12,70 @@ controller.index = (req, res) => {
     res.send(homeTemplate)
 };
 
-
-
 controller.aboutMe = async (req, res) => {
-    try{
+    try {
         const userCollection = await User.find();
         return res.json(userCollection);
     }
-    catch(error){
+    catch (error) {
         console.error('Error al obtener la informacion:', error);
         return res.status(500).json({ message: 'Error al obtener la informacion: ' + error });
     }
 }
 
 controller.projects = async (req, res) => {
-    try{
+    try {
         const projectsCollection = await Project.find();
         return res.json(projectsCollection);
     }
-    catch(error){
+    catch (error) {
         console.error('Error al obtener la informacion:', error);
         return res.status(500).json({ message: 'Error al obtener la informacion: ' + error });
     }
 }
 
 controller.experiences = async (req, res) => {
-    try{
+    try {
         const experienceCollection = await experience.find();
         return res.json(experienceCollection);
     }
-    catch(error){
+    catch (error) {
         console.error('Error al obtener la informacion:', error);
         return res.status(500).json({ message: 'Error al obtener la informacion: ' + error });
     }
 }
 
+controller.sendEmail = async (req, res) => {
+    const { name, email, message } = req.body;
 
-// controller.createUser = async (req, res) => {
-//     try {
-//         const newUser = new User({
-//             _id: new mongoose.Types.ObjectId(),
-//             name: req.body.name,
-//             alias: req.body.alias,
-//             picture_url: req.body.picture_url,
-//             position: req.body.position,
-//             email: req.body.email,
-//             phone: req.body.phone,
-//             location: req.body.location,
-//             description: req.body.description,
-//             github: req.body.github,
-//             linkedin: req.body.linkedin
-//         });
+    const configEmail = {
+        host: "smtp.gmail.com",
+        port: 587,
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+        }
+    }
 
-//         const savedUser = await newUser.save();
-//         res.status(201).json(savedUser);
-//     } catch (error) {
-//         console.error('Error al crear un nuevo usuario:', error);
-//         res.status(500).json({ message: 'Error al crear un nuevo usuario: ' + error.message });
-//     }
-// }
+    const transporter = nodemailer.createTransport(configEmail)
 
+    const mailOptions = {
+        from: `PORTFOLIO-SERVICE <${email}>`,
+        to: "portfoliowebdaniel@gmail.com",
+        subject: `Portfolio: New message (${name})`,
+        html: sendEmailTemplate(name, email, message),
+    }
+
+    try {
+        await transporter.sendMail(mailOptions);
+        console.log("Email Send successfully");
+        res.status(200).json({ message: 'Email Send Successfully!' })
+    }
+    catch (error) {
+        console.error(`Error sending email: ${error}`);
+        res.status(500).json({ message: 'Error sending email: ', error });
+    }
+}
 
 module.exports = controller;
 
