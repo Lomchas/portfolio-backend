@@ -68,8 +68,8 @@ controller.sendEmail = async (req, res) => {
 
     try {
         await transporter.sendMail(mailOptions);
-        console.log("Email Send successfully");
-        res.status(200).json({ message: 'Email Send Successfully!' })
+        console.log("Email was sent successfully");
+        res.status(200).json({ message: 'Email was sent successfully!' })
     }
     catch (error) {
         console.error(`Error sending email: ${error}`);
