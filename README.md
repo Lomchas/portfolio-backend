@@ -53,7 +53,12 @@ Welcome to my **Personal Portfolio API**! This API is designed to showcase my sk
 Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
 ## 📫 Contact
-If you have any questions or feedback, feel free to reach out!
+If you're interested in working together or collaborating on a project, feel free to reach out! You can contact me through the Contact section of my portfolio, where messages are sent directly to my email using Nodemailer.
+
+![image](https://github.com/user-attachments/assets/f34fd066-ef4d-4b2a-b40c-3bf9b5693c32)
+![contactme](https://github.com/user-attachments/assets/9ab69c18-e35d-42ec-a7db-64f0525214a9)
+
+Alternatively, you can also reach me through the following channels:
 
 - **Email**: [daniellosada17@gmail.com](mailto:daniellosada17@gmail.com)
 - **LinkedIn**: [linkedin.com/in/daniel-losada17](https://www.linkedin.com/in/daniel-losada17)
