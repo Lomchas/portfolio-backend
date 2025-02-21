@@ -18,7 +18,7 @@ module.exports = emailHtml = (name, email, message) => `
             overflow: hidden;
         }
         .header, .footer {
-            background: #333;
+            background: #22365D;
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -26,10 +26,11 @@ module.exports = emailHtml = (name, email, message) => `
         .content {
             background: #fff;
             padding: 20px;
-            margin-top: 10px;
+            border-right: 1px solid rgb(0, 0, 0);
+            border-left: 1px solid rgb(0, 0, 0);
         }
         h1 {
-            color: #333;
+            color: #fff;
         }
     </style>
 </head>

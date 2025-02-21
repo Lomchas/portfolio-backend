@@ -39,11 +39,12 @@ module.exports = welcomePage = `
                 .container-img{
                     display: flex;
                     justify-content: center;
-                    align-items: flex-start;
+                    align-items: flex-end;
                     overflow: hidden;
                     border-radius: 50% 50% 0 0;
                     width: 200px;
                     height: 250px;
+                    background-color: #22365D;
                 }
 
                 .container-img img {
