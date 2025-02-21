@@ -61,7 +61,7 @@ controller.sendEmail = async (req, res) => {
 
     const mailOptions = {
         from: `PORTFOLIO-SERVICE <${email}>`,
-        to: "portfoliowebdaniel@gmail.com",
+        to: "webportfoliodaniellosada17@gmail.com",
         subject: `Portfolio: New message (${name})`,
         html: sendEmailTemplate(name, email, message),
     }
