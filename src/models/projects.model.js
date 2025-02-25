@@ -11,7 +11,8 @@ const projectSchema = new mongoose.Schema({
 
 const projectsSchema = new mongoose.Schema({
     frontend_projects: [projectSchema],
-    backend_projects: [projectSchema]
+    backend_projects: [projectSchema],
+    mobile_projects: [projectSchema]
 });
 
 const Project = mongoose.model('projects', projectsSchema);
