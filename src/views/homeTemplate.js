@@ -86,8 +86,8 @@ module.exports = welcomePage = `
                     <img src="/assets/profile.png" alt="Profile">
                 </div>
                 <div class="container-btn">
-                    <a href="/aboutMe">🧑‍💻Know more about Me.</a>
-                    <a href="/experiences">🦾Do you want to see my skills?</a>
+                    <a href="aboutMe">🧑‍💻Know more about Me.</a>
+                    <a href="experiences">🦾Do you want to see my skills?</a>
                     <a href="portfolioDaniellosada/projects">📁Check my projects out.</a>
                 </div>
             </div>
